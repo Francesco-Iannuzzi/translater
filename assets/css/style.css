@@ -1,0 +1,117 @@
+/* #region utilities */
+
+:root {
+    --app-back: #FAFAFF;
+    --app-primary: #1e2749;
+    --app-secondary: #4b5ea2;
+    --app-text_translate: #30343F;
+    --app-back_translate: #43C59E;
+}
+
+/* #endregion utilities */
+
+/* #region commons */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--app-back);
+}
+
+.panel {
+    background-color: var(--app-primary);
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+/* #endregion commons */
+
+/* #region app_header */
+
+#app_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+    margin-top: 2rem;
+}
+
+
+.logo {
+    height: 100%;
+}
+
+/* #endregion app_header */
+
+/* #region app_main */
+
+.translate {
+    background-color: var(--app-back_translate);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    min-height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.flag_tranlate {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    font-size: 2rem;
+}
+
+.text_translate {
+    color: var(--app-text_translate);
+    font-size: 2rem;
+}
+
+.control_translate {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#text_to_translate {
+    background-color: var(--app-back);
+    padding: 2rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    width: 100%;
+    color: white;
+}
+
+.flags_control {
+    flex-grow: 2;
+}
+
+.lang_button,
+.reset_button {
+    background-color: var(--app-secondary);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 3rem;
+}
+
+.lang_button:hover,
+.reset_button:hover {
+    background-color: var(--app-back_translate);
+}
+
+/* #endregion app_main */
