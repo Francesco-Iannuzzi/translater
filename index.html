@@ -33,20 +33,21 @@
     <main id="app_main">
 
         <section class="translate panel container">
-            <div class="flag_tranlate">🇪🇸</div>
-            <p class="text_translate">Here the Translate</p>
+            <div class="flag_tranlate"></div>
+            <p class="text_translate">...</p>
         </section>
         <!-- /translate -->
 
         <section class="control_translate panel container">
 
-            <input type="text" name="text_to_translate" id="text_to_translate" placeholder="insert Text to Translate">
+            <input type="text" name="text_to_translate" id="text_to_translate"
+                placeholder="Enter the text to be Translated">
             <!-- /text_to_translate -->
 
             <div class="flags_control">
-                <button class="lang_button">🇬🇧</button>
-                <button class="lang_button">🇫🇷</button>
-                <button class="lang_button">🇪🇸</button>
+                <button class="lang_button" data-lang="en">🇬🇧</button>
+                <button class="lang_button" data-lang="fr">🇫🇷</button>
+                <button class="lang_button" data-lang="es">🇪🇸</button>
                 <button class="reset_button">❌</button>
             </div>
             <!-- /flags_control -->
