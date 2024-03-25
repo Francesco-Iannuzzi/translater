@@ -49,3 +49,28 @@ langButtons.forEach(btn => {
 
     })
 });
+
+
+/*
+
+Remove translate
+
+*/
+
+// function to remove translation
+function reset() {
+    // remove text in input
+    inputText.value = '';
+
+    // reset translation text
+    translationText.innerText = 'Translation';
+
+    // reset flag trasnaation
+    translationFlag.innerText = '';
+}
+
+// event listener on reset button
+resetButton.addEventListener('click', function () {
+
+    reset();
+});
