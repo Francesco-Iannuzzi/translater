@@ -70,7 +70,4 @@ function reset() {
 }
 
 // event listener on reset button
-resetButton.addEventListener('click', function () {
-
-    reset();
-});
+resetButton.addEventListener('click', reset);
