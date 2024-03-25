@@ -3,6 +3,9 @@ const inputText = document.querySelector('#text_to_translate');
 const langButtons = document.querySelectorAll('.lang_button');
 const resetButton = document.querySelector('.reset_button');
 
+// DOM language from translation
+const langFromTranslation = document.querySelector('#lang_from_translation');
+
 // DOM translation
 const translationText = document.querySelector('.text_translate');
 const translationFlag = document.querySelector('.flag_tranlate');
@@ -14,9 +17,9 @@ TRANSLATER
 */
 
 // API url translater
-async function translate(text, lang, flag) {
+async function translate(text, lang, flag, langFrom) {
 
-    const urlTranslater = `https://api.mymemory.translated.net/get?q=${text}!&langpair=it|${lang}`;
+    const urlTranslater = `https://api.mymemory.translated.net/get?q=${text}!&langpair=${langFrom}|${lang}`;
     const response = await fetch(urlTranslater);
     const jsonData = await response.json();
 
@@ -28,6 +31,11 @@ async function translate(text, lang, flag) {
     translationFlag.innerText = flag;
 
 }
+
+
+// select language from translation
+langFromTranslation.onchange = function () { }
+
 
 // loop in langs button
 langButtons.forEach(btn => {
@@ -44,8 +52,11 @@ langButtons.forEach(btn => {
         // recover the flag translation
         const flag = btn.innerText;
 
+        // recover the languange from translation
+        const langFrom = langFromTranslation.value;
+
         //invoke the translate function
-        translate(text, lang, flag);
+        translate(text, lang, flag, langFrom);
 
     })
 });
@@ -67,6 +78,9 @@ function reset() {
 
     // reset flag trasnaation
     translationFlag.innerText = '';
+
+    // reset lang from translation
+    langFromTranslation.selectedIndex = 0;
 }
 
 // event listener on reset button
