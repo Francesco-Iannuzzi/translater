@@ -31,7 +31,7 @@ body {
     border-radius: 2rem;
     padding: 2rem;
     box-shadow: 5px 10px 8px #888888;
-    max-width: 40rem;
+    max-width: 45rem;
 }
 
 /* #endregion commons */
@@ -85,6 +85,14 @@ body {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+}
+
+.langs_from_control {
+    align-self: flex-start;
+}
+
+.langs_from_control>.form-label {
+    color: #43C59E
 }
 
 #text_to_translate {
