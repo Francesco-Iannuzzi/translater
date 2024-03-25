@@ -31,6 +31,7 @@ body {
     border-radius: 2rem;
     padding: 2rem;
     box-shadow: 5px 10px 8px #888888;
+    max-width: 40rem;
 }
 
 /* #endregion commons */
